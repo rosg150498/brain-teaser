@@ -84,6 +84,23 @@ Welcome to BrainTeaser. The goal of BrainTeaser is to give players a fun and cha
 
 ## Expectations
 
+* I expect the quiz to load quickly and smoothly so that I can maintain my enthusiasm.
+
+* I expect an intuitive design with easy to follow instructions.
+
+* I expect to navigate to each of the quiz sections with ease.
+
+* I expect an answer to be marked as correct or incorrect.
+
+* I expect the score to be displayed throughout the duration of the quiz so I can track with ease.
+
+* I expect to locate and navigate to the leaderboard so I can manage my high scores in one place.
+
+* I expect the quiz to have a variety of topics that are interesting and engaging.
+
+* I expect to view the quiz on various screen devices such as mobile, tablet and laptop.
+
+
 ## Website Design Colours
 
 ## Colours
