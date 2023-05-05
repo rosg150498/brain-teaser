@@ -66,6 +66,22 @@ Welcome to BrainTeaser. The goal of BrainTeaser is to give players a fun and cha
 
 ### Requirements 
 
+1) Incorporate a consistent, eye-catching, and efficient design to ensure user's have a positive experience.
+
+2) Appropriate headings are used to capture the user's attention and convey important information.
+
+3) The single page website is designed in a way that the user's attention is maintained throughout the entirety of the quiz testing their general knowledge.
+
+4) The webpage is designed for all users in mind, including those with disabilities or specialised requirements.
+
+5) The quiz should have a sufficient number of questions covering various topics.
+ 
+6) The quiz should have a scoring system that calculates and displays the user's score at the end of the quiz.
+
+7) The quiz questions should be randomized each time a user takes the quiz to prevent users from memorizing the answers.
+
+8) The quiz should have a time limit for the entire quiz to add an element of challenge.
+
 ## Expectations
 
 ## Website Design Colours
