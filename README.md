@@ -64,7 +64,7 @@ Welcome to BrainTeaser. The goal of BrainTeaser is to give players a fun and cha
 
 6) Ensure that users can access the quiz on mobile, tablet and laptop devices.
 
-## Requirements 
+### Requirements 
 
 ## Expectations
 
