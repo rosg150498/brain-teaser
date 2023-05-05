@@ -52,6 +52,18 @@ Welcome to BrainTeaser. The goal of BrainTeaser is to give players a fun and cha
 
 ### Site Owner Goals
 
+1) Advertise general knowledge questions.
+
+2) Increase user engagement.
+
+3) Incorporate site accessibility for users.
+
+4) Ensure that users' scores, based on their selection of correct or incorrect answers, can be accurately generated and saved to a leaderboard.
+
+5) Ensure a time limit is set for the entire quiz and that each question can be monitored.
+
+6) Ensure that users can access the quiz on mobile, tablet and laptop devices.
+
 ## Requirements 
 
 ## Expectations
