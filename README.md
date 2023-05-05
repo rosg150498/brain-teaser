@@ -30,6 +30,26 @@ Welcome to BrainTeaser. The goal of BrainTeaser is to give players a fun and cha
 
 ### User Stories
 
+1) As a user, I want the single webpage to load quickly so that I can maintain my interest and level of engagement throughout the entire quiz.
+
+2) As a user, I need it to be intuitively designed so that I can jump right in and start playing with clear instructions provided.
+
+3) As a user, I want to be able to input my name into the designated name text field with ease and I want it to be appeared within the quiz game.
+
+4) As a user, I want the quiz to have a variety of questions and topics so that I can test my common knowledge and gain exposure to new subject themes.
+
+5) As a user, I would like to keep track of my progress in the quiz I am taking.
+
+6) As a user, I want a time limit set for the quiz to make it more challenging and interesting.
+
+7) As a user, I want to be able to see my score at the end of the quiz.
+
+8) As a user, I want to be able to view my high scores in a leaderboard and see how I am progressing over time.
+
+9) As a user, I want the quiz to be visually stunning and wholly absorbing with the choice of typeface, the use of vibrant colours and the inclusion of interesting icons.
+
+10) As a user, I want to be able to access the quiz on different devices, such as mobile phone, tablet and laptop.
+
 ## Site Owner Goals
 
 ## Requirements 
