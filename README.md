@@ -8,7 +8,7 @@ Welcome to BrainTeaser. The goal of BrainTeaser is to give players a fun and cha
 
 ### User Goals
 
-1) Ablility to navigate the single page smoothly.
+1) Ability to navigate the single page smoothly.
 
 2) Accessibility features are easily identifiable, which includes alternative text (alt text).
 
