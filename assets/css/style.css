@@ -52,9 +52,21 @@ body{
     width: 100%;
 }
 
+#quiz-icon{
+    background-image: url(../images/general-knowledge-icon.png);
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    margin-top: 54rem;
+    margin-left: 5.8rem;
+    box-shadow: 0 8px 30px #FFA500;
+    border-radius: 25%;
+}
+
 #quiz-heading{
     font-family: 'Lato', sans-serif;
-    font-size: 30px;
+    font-size: 34px;
     color: #FFFFFF;
     position: absolute;
     margin-top: 60rem;
