@@ -20,10 +20,11 @@ body{
     background-image: url(../images/home-icon.png);
     background-repeat: no-repeat;
     height: 140px;
-    width: 200px;
+    width: 320px;
     position: absolute;
     margin-top: 1rem;
     margin-left: 4rem;
+    box-shadow: 0 6px 20px #FFA500;
 }
 
 #home-icon-text{
