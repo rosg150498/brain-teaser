@@ -28,7 +28,7 @@ function showQuizQuestion(data) {
      questionElement.classList.add('question', 'hidden');
    
      const questionText = document.createElement('p');
-     questionText.textContent = `${index + 1}. ${item.question}`;
+     questionText.textContent = `${index + 1}. ${item.question.replaceAll(/&#039;/g, "'").replaceAll(/&quot;/g, '"').replaceAll(/&shy;/g, '').replaceAll(/&rdquo;/g, '"')}`;
      questionText.setAttribute('class', 'quiz-question');
      questionElement.appendChild(questionText);
    
@@ -80,7 +80,7 @@ function generateAnswers(listofAnswers) {
     listofAnswers.forEach((answerText, index) => {
         const answerElement = document.createElement('p');
         answerElement.classList.add(`answer-${answerLetters[index]}`);
-        answerElement.textContent = `${answerLetters[index]}. ${answerText}`;
+        answerElement.textContent = `${answerLetters[index]}. ${answerText.replaceAll(/&rsquo;/g, "'").replaceAll(/&auml;/g, 'ä').replaceAll(/&aring;/g, 'å').replaceAll(/&ouml;/g, 'ö').replaceAll(/&oacute;/g, 'ó')}`;
 
         answerElement.addEventListener('click', () => {
             checkAnswer(answerText, questions[questionIndex].correct_answer);

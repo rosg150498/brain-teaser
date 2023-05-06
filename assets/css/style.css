@@ -81,20 +81,22 @@ body{
     margin-top: 72rem;
     margin-bottom: 20rem;
     margin-left: 5.8em;
+    font-weight: bold;
 }
 
 .quiz-answers{
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     color: #FFFFFF;
-    margin-top: 80rem;
+    margin-top: 78rem;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
     display: block;
     position: absolute;  
     margin-left: 8.8rem;
-    line-height: 4rem;
+    line-height: 6rem;
+    font-weight: bold;
 }
 
 
