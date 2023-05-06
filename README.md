@@ -105,9 +105,17 @@ Welcome to BrainTeaser. The goal of BrainTeaser is to give players a fun and cha
 
 ## Colours
 
+I have chosen a background blue colour shade of #002366 that is deep and intense, which can help create a sense of focus and concentration. This color is often associated with intelligence, knowledge, and wisdom, which is appropriate for a general knowledge quiz. Additionally, this shade of blue has a high contrast with white text which I have decided for my text colour, making the text more legible and accessible for individuals with visual impairments. The white text color (#FFFFFF) provides a high contrast against the blue background, making it easier to read for individuals with visual impairments or who may have difficulty reading text on a darker background. The high contrast can also help the text stand out and appear more prominent, making it easier for users to navigate and interact with the quiz.I will make headings throughout the single webpage a bold white colour. #FFA500 is a bright and vivid shade of orange that can represent enthusiasm, creativity, and excitement. It can also be associated with warmth, optimism, and energy. Therefore, I have decided this color choice for the buttons as it can attract the user's attention and encourage action.
+
 ## Fonts
 
-## Logo
+I have decided to use Lato font-family for the general knowledge quiz headings. Lato is a versatile and modern sans-serif font that works well for headings because of its clean and readable appearance. It has a wide range of weights and styles, that will make it easer for users to interpret headings content throughout the quiz. Lato also has good legibility on both desktop and mobile devices, which is important for a quiz website being accessed on different screens and devices.
+
+I have decided upon Open Sans for the main body text because of its legibility and easy readability. It is a clean and neutral font that allows for easy scanning of content and reduces visual fatigue. Open Sans also has a wide range of weights and styles, which makes it easy for users to digest the information provided to them and any feedback that is given to them.
+
+## Logo / Icons
+
+I have settled with including Favicons logo and icons throughout the general knowledge single page webpage as it can enhance the user experience by making it more visually appealing and can add visual interest helping break up large blocks of text, in turn making the the page easier to read and more engaging. Also by incorporating logos and icons for different sections throughout the webpage can help users quickly identify and understand the content of each section which can contribute to a more user-friendly and visual appealing design.
 
 ## Media Queries / Responsive Design
 
