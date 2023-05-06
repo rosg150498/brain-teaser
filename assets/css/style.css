@@ -41,7 +41,7 @@ body{
     color: #FFFFFF;
     font-size: 40px;
     position: absolute;
-    margin-top: 10rem;
+    margin-top: 18rem;
 }
 
 
@@ -57,7 +57,15 @@ body{
     font-size: 30px;
     color: #FFFFFF;
     position: absolute;
-    margin-top: 16rem;
+    margin-top: 60rem;
+}
+
+.quiz-question{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    color: #FFFFFF;
+    position: absolute;
+    margin-top: 80rem;
 }
 
 
