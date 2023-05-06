@@ -1,6 +1,7 @@
 // General Knowledge Questions
 
 let questions = [];
+let questionIndex = 0;
 
 
 // Function that will load the quiz questions from the Open tdb API
@@ -16,33 +17,35 @@ function loadQuizQuestion() {
 // Function that will return the quiz questions and answers data
 
 function showQuizQuestion(data) {
-  const something = data.map(item => {
-    return {
-      difficulty: item.difficulty,
-      question: item.question,
-      correctAnswer: item.correct_answer,
-      answers: [...item.incorrect_answers, item.correct_answer]
-    };
-  });
-
-  questions.push(...something);
-  console.log(questions);
-
-  // Adding questions to the quiz container
-  const quizElement = document.getElementById('quiz-question');
-  questions.forEach((question, index) => {
-    const questionElement = document.createElement('div');
-    questionElement.classList.add('question');
-
-    const questionText = document.createElement('p');
-    questionText.textContent = `${index + 1}. ${question.question}`;
-    questionText.setAttribute('class', 'quiz-question');
-    questionElement.appendChild(questionText);
-
-    
-    quizElement.appendChild(questionElement);
-  });
-}
+ const quizElement = document.getElementById('quiz-question');
+   quizElement.innerHTML = ''; // remove any existing questions
+   
+   data.forEach((item, index) => {
+     const questionElement = document.createElement('div');
+     questionElement.setAttribute('id', `question-${index}`);
+     questionElement.classList.add('question', 'hidden');
+   
+     const questionText = document.createElement('p');
+     questionText.textContent = `${index + 1}. ${item.question}`;
+     questionText.setAttribute('class', 'quiz-question');
+     questionElement.appendChild(questionText);
+   
+     quizElement.appendChild(questionElement);
+   });
+   
+   questions = data;
+   showQuestion();
+ }
+ 
+ function showQuestion() {
+   const allQuestions = document.querySelectorAll('.question');
+     allQuestions.forEach(question => {
+       question.style.display = 'none';
+     });
+   
+     const currentQuestion = document.getElementById(`question-${questionIndex}`);
+     currentQuestion.style.display = 'block';
+   }
 
 loadQuizQuestion();
 
