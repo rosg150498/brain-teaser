@@ -39,9 +39,10 @@ body{
 #home-quiz-heading{
     font-family: 'Lato', sans-serif;
     color: #FFFFFF;
-    font-size: 40px;
+    font-size: 34px;
     position: absolute;
-    margin-top: 18rem;
+    margin-top: 14rem;
+    margin-left: 10rem;
 }
 
 
