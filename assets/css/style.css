@@ -83,5 +83,19 @@ body{
     margin-left: 5.8em;
 }
 
+.quiz-answers{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-top: 80rem;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    position: absolute;  
+    margin-left: 8.8rem;
+}
+
+
 
 
