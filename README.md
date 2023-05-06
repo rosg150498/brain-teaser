@@ -117,6 +117,26 @@ I have decided upon Open Sans for the main body text because of its legibility a
 
 I have settled with including Favicons logo and icons throughout the general knowledge single page webpage as it can enhance the user experience by making it more visually appealing and can add visual interest helping break up large blocks of text, in turn making the the page easier to read and more engaging. Also by incorporating logos and icons for different sections throughout the webpage can help users quickly identify and understand the content of each section which can contribute to a more user-friendly and visual appealing design.
 
+## Wireframes
+
+I have created wireframes for each section that I plan to include in the single-page design of my general knowledge quiz application. Each wireframe represents a proposed design for the overall look and feel of the section, and together they form the entirety of the single-page website.
+
+![Home Section](https://user-images.githubusercontent.com/114010857/236636461-871020b7-04ae-4536-9d1a-f84539e61d7f.png)
+
+<hr>
+
+![Quiz Section](https://user-images.githubusercontent.com/114010857/236636480-eba1b366-d65a-41e4-ad5a-aff8ca3e8125.png)
+
+<hr>
+
+![Score Section](https://user-images.githubusercontent.com/114010857/236636510-d439d3b9-3852-4c70-acbc-e43a0bb86533.png)
+
+<hr>
+
+![Leaderboard Section](https://user-images.githubusercontent.com/114010857/236636522-d89f8683-61d4-4077-8512-d819e2df6165.png)
+
+<hr>
+
 ## Media Queries / Responsive Design
 
 ## Current Features
