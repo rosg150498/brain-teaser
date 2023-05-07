@@ -45,6 +45,22 @@ body{
     margin-left: 10rem;
 }
 
+label{
+    font-family: 'Open Sans', sans-serif;
+    color: #FFFFFF;
+    font-size: 28px;
+    display: inline-block;
+    margin-top: 28rem;
+    margin-left: 34rem;
+}
+
+#name{
+   height: 1.6rem;
+   width: 14.2rem;
+   margin-left: 0.6rem;
+}
+
+
 
 /* Quiz Section */
 
