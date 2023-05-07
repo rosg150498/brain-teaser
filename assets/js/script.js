@@ -1,5 +1,10 @@
 const quizanswers = document.querySelector('.quiz-answers');
 
+  function validateName (name) {
+        const nameRegex = /^[a-zA-Z\s'-]+$/;
+        return nameRegex.test(name);
+   }
+
   function storeName() {
 
       const name = document.getElementById('name').value

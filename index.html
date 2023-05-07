@@ -23,11 +23,18 @@
 
     <h1 id="home-quiz-heading">Welcome to Brain Teaser. Challenge yourself with Our General Knowledge Quiz!</h1>
 
+    <form>
+
     <label for="name">Enter your name:</label>
     
-    <input type="text" id="name" placeholder="Please enter your name...">
+    <input type="text" id="name" placeholder="Please enter your name..." pattern="^[a-zA-Z\s'-]+$" required>
 
-        <button id="submit-name">Submit</button>
+     <p id="error-message" style="display: none; color: #AD0401;">Please enter a valid name...</p>
+
+        <button id="submit-name" onclick="validateForm(event)" >Submit</button>
+
+
+    </form>
 
         <a href="#quiz" class="quiz-button-link">Play Quiz</a>
 
