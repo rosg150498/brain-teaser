@@ -1,5 +1,19 @@
 const quizanswers = document.querySelector('.quiz-answers');
 
+  function storeName() {
+
+      const name = document.getElementById('name').value
+
+      const nameElement = document.createElement('p');
+
+      nameElement.textContent = `Name: ${name}`;
+
+      document.getElementById('quiz-name').appendChild(nameElement);
+
+   }
+
+   document.getElementById('submit-name').addEventListener('click', storeName);
+
 // General Knowledge Questions
 
 let questions = [];
