@@ -100,6 +100,10 @@ body{
     font-weight: bold;
 }
 
-
+.submit-answer{
+    height: 300px;
+    width: 300px;
+    color: #E6E6E6;
+}
 
 
