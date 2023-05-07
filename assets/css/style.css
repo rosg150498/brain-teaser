@@ -60,6 +60,12 @@ label{
    margin-left: 0.6rem;
 }
 
+#error-message{
+    font-family: 'Open Sans', sans-serif;
+    color: #FFA500;
+    display: none;
+}
+
 #submit-name{
     font-family: 'Open Sans', sans-serif;
     background-color: #FFA500;
