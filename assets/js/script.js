@@ -111,6 +111,8 @@ function generateAnswers(listofAnswers) {
     });
 
     const answerTextElement = document.createElement('ul');
+    
+    answerTextElement.setAttribute('class', 'answers')
 
     answerTextElement.textContent = `${answerLetters[index]}. ${answerText.replaceAll(/&rsquo;/g, "'").replaceAll(/&auml;/g, 'ä').replaceAll(/&aring;/g, 'å').replaceAll(/&ouml;/g, 'ö').replaceAll(/&oacute;/g, 'ó')}`;
 
