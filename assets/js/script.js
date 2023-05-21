@@ -93,34 +93,37 @@ function showQuestion() {
 }
 
 function generateAnswers(listofAnswers) {
-    const quizanswers = document.querySelector('.quiz-answers');
-    quizanswers.innerHTML = ''; // remove any existing answers
+  const quizanswers = document.querySelector('.quiz-answers');
+  quizanswers.innerHTML = ''; // remove any existing answers
 
-    const answerLetters = ['A', 'B', 'C', 'D'];
-    listofAnswers.forEach((answerText, index) => {
-        const answerElement = document.createElement('p');
-        answerElement.classList.add(`answer-${answerLetters[index]}`);
-        answerElement.textContent = `${answerLetters[index]}. ${answerText.replaceAll(/&rsquo;/g, "'").replaceAll(/&auml;/g, 'ä').replaceAll(/&aring;/g, 'å').replaceAll(/&ouml;/g, 'ö').replaceAll(/&oacute;/g, 'ó')}`;
+  const answerLetters = ['A', 'B', 'C', 'D'];
 
-        answerElement.addEventListener('click', () => {
-            userAnswer = answerText;
-        });
+  listofAnswers.forEach((answerText, index) => {
+    const answerElement = document.createElement('label');
+    answerElement.classList.add(`answer-${answerLetters[index]}`);
 
-        quizanswers.appendChild(answerElement); 
-
-        const submitButton = document.createElement('button');
-        submitButton.setAttribute('class', 'submit-answer')
-        submitButton.textContent = 'Submit Answer';
-        submitButton.addEventListener('click', () => {
-            checkAnswer(userAnswer, questions[questionIndex].correct_answer);
-            questionIndex++;
-            if (questionIndex < questions.length) {
-                showQuestion();
-            } else {
-                // End of quiz
-            }
-        }); // fix here
+    const radioInput = document.createElement('input');
+    radioInput.setAttribute('type', 'radio');
+    radioInput.setAttribute('name', 'answer');
+    radioInput.setAttribute('value', answerText);
+    radioInput.addEventListener('click', () => {
+      userAnswer = answerText;
     });
-}
+
+    const answerTextElement = document.createElement('ul');
+
+    answerTextElement.textContent = `${answerLetters[index]}. ${answerText.replaceAll(/&rsquo;/g, "'").replaceAll(/&auml;/g, 'ä').replaceAll(/&aring;/g, 'å').replaceAll(/&ouml;/g, 'ö').replaceAll(/&oacute;/g, 'ó')}`;
+
+    answerElement.appendChild(radioInput);
+
+    answerElement.appendChild(answerTextElement);
+
+    quizanswers.appendChild(answerElement);
+  });
+
+
+      // End of quiz
+    }
+
 
 loadQuizQuestion();
