@@ -25,6 +25,7 @@ let questions = [];
 let questionIndex = 0;
 let userAnswer;
 let correctAnswer;
+let score = 0;
 
 // Function that will load the quiz questions from the Open tdb API
 
@@ -131,6 +132,8 @@ function submitAnswer() {
 
     if (isCorrect) {
       alert('Correct answer!');
+      score += 10; 
+      document.getElementById('score').textContent = `Score: ${score}`; 
     } else {
       alert('Incorrect answer!');
     }
