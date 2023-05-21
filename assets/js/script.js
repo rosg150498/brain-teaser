@@ -93,34 +93,38 @@ function showQuestion() {
 }
 
 function generateAnswers(listofAnswers) {
-  const quizanswers = document.querySelector('.quiz-answers');
-  quizanswers.innerHTML = '';
+    const quizanswers = document.querySelector('.quiz-answers');
+    quizanswers.innerHTML = '';
 
-  const answerLetters = ['A', 'B', 'C', 'D'];
+    const answerLetters = ['A', 'B', 'C', 'D'];
 
-  listofAnswers.forEach((answerText, index) => {
-    const answerElement = document.createElement('p');
-    answerElement.classList.add(`answer-${answerLetters[index]}`);
+    listofAnswers.forEach((answerText, index) => {
+        const answerElement = document.createElement('p');
+        answerElement.classList.add(`answer-${answerLetters[index]}`);
 
-    const answerTextElement = document.createElement('span');
-    answerTextElement.textContent = `${answerLetters[index]}. ${answerText.replaceAll(/&rsquo;/g, "'").replaceAll(/&auml;/g, 'ä').replaceAll(/&aring;/g, 'å').replaceAll(/&ouml;/g, 'ö').replaceAll(/&oacute;/g, 'ó')}`;
+        const radioInput = document.createElement('input');
+        radioInput.setAttribute('type', 'radio');
+        radioInput.setAttribute('name', 'answer');
+        radioInput.setAttribute('value', answerText);
+        if (answerText === questions[questionIndex].correct_answer) {
+            radioInput.setAttribute('data-correct', 'true');
+            correctAnswer = answerText;
+        }
+        radioInput.addEventListener('click', () => {
+            userAnswer = answerText;
+        });
 
-    const radioInput = document.createElement('input');
-    radioInput.setAttribute('type', 'radio');
-    radioInput.setAttribute('name', 'answer');
-    radioInput.setAttribute('value', answerText);
-    radioInput.addEventListener('click', () => {
-      userAnswer = answerText;
+        const answerTextElement = document.createElement('span');
+        answerTextElement.textContent = `${answerLetters[index]}. ${answerText}`;
+
+        answerElement.appendChild(radioInput);
+        answerElement.appendChild(answerTextElement);
+
+        quizanswers.appendChild(answerElement);
     });
 
-    answerElement.appendChild(radioInput);
-    answerElement.appendChild(answerTextElement);
 
-    quizanswers.appendChild(answerElement);
-  });
-
-
-    function submitAnswer(){
+function submitAnswer(){
         if(userAnswer) {
             const selectedAnswer = document.querySelector(`input[name="answer"]:checked`);
             const isCorrect = selectedAnswer.getAttribute('data-correct') == 'true';
