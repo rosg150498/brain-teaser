@@ -162,10 +162,16 @@ label{
 }
 
 .submit-answer{
-    height: 300px;
-    width: 300px;
-    color: #FFA500;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFA500;
+    border-color: #E6E6E6;
+    color: #FFFFFF;
+    padding:  1rem 1rem;
     position: absolute;
+    font-size: 14.4px;
+    margin-top: 105rem;
+    margin-left: 8.8rem;
+    cursor: pointer;
 }
 
 .return-main-menu{
