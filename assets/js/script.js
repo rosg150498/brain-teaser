@@ -118,7 +118,28 @@ function generateAnswers(listofAnswers) {
 
     quizanswers.appendChild(answerElement);
   });
-}
+
+
+    function submitAnswer(){
+        if(userAnswer) {
+            const selectedAnswer = document.querySelector(`input[name="answer"]:checked`);
+            const isCorrect = selectedAnswer.getAttribute('data-correct') == 'true';
+
+              if (isCorrect) {
+                        alert('Correct answer!');
+                    } else {
+                        alert('Incorrect answer!');
+                    }
+                    
+                    userAnswer = undefined;
+                            questionIndex++;
+                            showQuestion();
+                        } else {
+                            alert('Please select an answer.');
+                        }
+                    }
+            
+        }
 
 
 loadQuizQuestion();
