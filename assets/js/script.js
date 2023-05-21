@@ -134,6 +134,9 @@ function submitAnswer() {
       alert('Correct answer!');
       score += 10; 
       document.getElementById('score').textContent = `Score: ${score}`; 
+      document.getElementById('score').style.position = 'absolute';
+      document.getElementById('score').style.color = 'white';
+      document.getElementById('score').style.fontSize = '20px';
     } else {
       alert('Incorrect answer!');
     }
