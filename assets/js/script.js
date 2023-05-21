@@ -102,6 +102,9 @@ function generateAnswers(listofAnswers) {
     const answerElement = document.createElement('p');
     answerElement.classList.add(`answer-${answerLetters[index]}`);
 
+    const answerTextElement = document.createElement('span');
+    answerTextElement.textContent = `${answerLetters[index]}. ${answerText.replaceAll(/&rsquo;/g, "'").replaceAll(/&auml;/g, 'ä').replaceAll(/&aring;/g, 'å').replaceAll(/&ouml;/g, 'ö').replaceAll(/&oacute;/g, 'ó')}`;
+
     const radioInput = document.createElement('input');
     radioInput.setAttribute('type', 'radio');
     radioInput.setAttribute('name', 'answer');
@@ -110,22 +113,12 @@ function generateAnswers(listofAnswers) {
       userAnswer = answerText;
     });
 
-    const answerTextElement = document.createElement('ul');
-
-    answerTextElement.setAttribute('class', 'answers')
-
-    answerTextElement.textContent = `${answerLetters[index]}. ${answerText.replaceAll(/&rsquo;/g, "'").replaceAll(/&auml;/g, 'ä').replaceAll(/&aring;/g, 'å').replaceAll(/&ouml;/g, 'ö').replaceAll(/&oacute;/g, 'ó')}`;
-
     answerElement.appendChild(radioInput);
-
     answerElement.appendChild(answerTextElement);
 
     quizanswers.appendChild(answerElement);
   });
-
-
-      // End of quiz
-    }
+}
 
 
 loadQuizQuestion();
