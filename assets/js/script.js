@@ -94,12 +94,12 @@ function showQuestion() {
 
 function generateAnswers(listofAnswers) {
   const quizanswers = document.querySelector('.quiz-answers');
-  quizanswers.innerHTML = ''; // remove any existing answers
+  quizanswers.innerHTML = '';
 
   const answerLetters = ['A', 'B', 'C', 'D'];
 
   listofAnswers.forEach((answerText, index) => {
-    const answerElement = document.createElement('label');
+    const answerElement = document.createElement('p');
     answerElement.classList.add(`answer-${answerLetters[index]}`);
 
     const radioInput = document.createElement('input');
@@ -111,7 +111,7 @@ function generateAnswers(listofAnswers) {
     });
 
     const answerTextElement = document.createElement('ul');
-    
+
     answerTextElement.setAttribute('class', 'answers')
 
     answerTextElement.textContent = `${answerLetters[index]}. ${answerText.replaceAll(/&rsquo;/g, "'").replaceAll(/&auml;/g, 'ä').replaceAll(/&aring;/g, 'å').replaceAll(/&ouml;/g, 'ö').replaceAll(/&oacute;/g, 'ó')}`;
