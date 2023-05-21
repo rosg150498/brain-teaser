@@ -24,7 +24,7 @@ const quizanswers = document.querySelector('.quiz-answers');
 let questions = [];
 let questionIndex = 0;
 let userAnswer;
-
+let correctAnswer;
 
 // Function that will load the quiz questions from the Open tdb API
 
