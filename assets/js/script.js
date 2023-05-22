@@ -135,8 +135,11 @@ function submitAnswer() {
       score += 10; 
       document.getElementById('score').textContent = `Score: ${score}`; 
       document.getElementById('score').style.position = 'absolute';
+      document.getElementById('score').style.marginTop = '68rem';
+      document.getElementById('score').style.marginLeft = '70rem';
       document.getElementById('score').style.color = 'white';
-      document.getElementById('score').style.fontSize = '20px';
+      document.getElementById('score').style.fontSize = '25px';
+      document.getElementById('score').style.textDecoration = 'underline';
     } else {
       alert('Incorrect answer!');
     }
