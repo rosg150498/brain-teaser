@@ -1,4 +1,5 @@
 const quizanswers = document.querySelector('.quiz-answers');
+const timerElement = document.getElementById('quiz-timer');
 
   function validateName (name) {
         const nameRegex = /^[a-zA-Z\s'-]+$/;
@@ -26,7 +27,8 @@ let questionIndex = 0;
 let userAnswer;
 let correctAnswer;
 let score = 0;
-let quiztimerValue = 120;
+let timerValue = 110;
+
 
 // Function that will load the quiz questions from the Open tdb API
 
@@ -42,7 +44,7 @@ function loadQuizQuestion() {
 
 function showQuizQuestion(data) {
     const quizElement = document.getElementById('quiz-question');
-    quizElement.innerHTML = ''; // remove any existing questions
+    quizElement.innerHTML = ''; 
 
     data.forEach((item, index) => {
         const questionElement = document.createElement('div');
@@ -79,6 +81,8 @@ function showQuizQuestion(data) {
 
     questions = data;
     showQuestion();
+
+    startTimer(endQuiz);
 }
 
 function showQuestion() {
@@ -151,6 +155,29 @@ function submitAnswer() {
   } else {
     alert('Please select an answer.');
   }
+}
+
+
+function updateTimerDisplay() {
+    timerElement.textContent = `Quiz Time Remaining: ${timerValue} seconds`;
+}
+
+function startTimer(endCallback) {
+    updateTimerDisplay(); 
+
+    const timerInterval = setInterval(() => {
+        timerValue--;
+        updateTimerDisplay();
+
+        if (timerValue <= 0) {
+            clearInterval(timerInterval);
+            endCallback(); 
+        }
+    }, 1000);
+}
+
+function endQuiz() {
+    alert('Time is up! Quiz has ended.');  
 }
 
 loadQuizQuestion();
