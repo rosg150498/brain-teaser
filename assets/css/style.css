@@ -199,5 +199,13 @@ label{
     position: absolute;
 }
 
+#quiz-timer{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19.8px;
+    color: #FFA500;
+    position: absolute;
+    margin-top: 68rem;
+    margin-left: 46rem;
+}
 
 
