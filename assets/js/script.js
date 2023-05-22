@@ -26,6 +26,7 @@ let questionIndex = 0;
 let userAnswer;
 let correctAnswer;
 let score = 0;
+let quiztimerValue = 120;
 
 // Function that will load the quiz questions from the Open tdb API
 
