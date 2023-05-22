@@ -128,10 +128,13 @@ label{
 
 #quiz-name{
     font-family: 'Open Sans', sans-serif;
-    font-size: 28px;
+    font-size: 25px;
     color: #FFFFFF;
     display: block;
     position: absolute;
+    margin-top: 64rem;
+    margin-left: 70rem;
+    text-decoration: underline;
 }
 
 .quiz-question{
