@@ -171,13 +171,31 @@ function startTimer(endCallback) {
 
         if (timerValue <= 0) {
             clearInterval(timerInterval);
-            endCallback(); 
+            endCallback(); // 
         }
     }, 1000);
 }
 
 function endQuiz() {
     alert('Time is up! Quiz has ended.');  
+
+    resetQuiz();
+}
+
+function resetQuiz() {
+    questionIndex = 0;
+    userAnswer = undefined;
+    score = 0;
+    timerValue = 120;
+
+    const quizElement = document.getElementById('quiz-question');
+    quizElement.innerHTML = '';
+
+    const quizAnswersElement = document.querySelector('.quiz-answers');
+    quizAnswersElement.innerHTML = '';
+
+    loadQuizQuestion();
+
 }
 
 loadQuizQuestion();
