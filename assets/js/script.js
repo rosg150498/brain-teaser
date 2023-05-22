@@ -6,19 +6,24 @@ const timerElement = document.getElementById('quiz-timer');
         return nameRegex.test(name);
    }
 
-  function storeName() {
+  function storeName(event) {
 
-      const name = document.getElementById('name').value
+    const name = document.getElementById('name').value;
 
-      const nameElement = document.createElement('p');
+    const nameElement = document.getElementById('quiz-name');
 
-      nameElement.textContent = `Name: ${name}`;
+    nameElement.textContent = `Name: ${name}`;
+  
+    return false; 
+  }
 
-      document.getElementById('quiz-name').appendChild(nameElement);
+   document.getElementById('submit-name').addEventListener('click', function(event) {
 
-   }
+     event.preventDefault();
 
-   document.getElementById('submit-name').addEventListener('click', storeName);
+     storeName();
+     
+   });
 
 // General Knowledge Questions
 
