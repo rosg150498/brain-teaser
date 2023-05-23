@@ -232,7 +232,24 @@ function quizuserleaderboard() {
 
     leaderboard.innerHTML = ''; 
 
+    highScores.forEach((score, index) => {
+        const row = document.createElement('div');
+        row.classList.add('leaderboard-result-row');
+    
+        const rankCell = document.createElement('div');
+        rankCell.classList.add('leaderboard-score-rank');
+        rankCell.textContent = index + 1;
+    
+        const nameCell = document.createElement('div');
+        nameCell.classList.add('leaderboard-user-name');
+        nameCell.textContent = score.name;
+    
+        const scoreCell = document.createElement('div');
+        scoreCell.classList.add('leaderboard-user-score');
+        scoreCell.textContent = score.score;
+
 }
+)}
 
 
 loadQuizQuestion();
