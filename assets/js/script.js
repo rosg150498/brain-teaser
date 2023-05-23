@@ -224,4 +224,7 @@ function resetQuiz() {
 }
 
 
+/* Leaderboard Quiz Function */
+
+
 loadQuizQuestion();
