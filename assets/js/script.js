@@ -90,6 +90,9 @@ function showQuizQuestion(data) {
     startTimer(endQuiz);
 }
 
+
+/* Show Question Function to display current question and hide all questions from API */
+
 function showQuestion() {
     const allQuestions = document.querySelectorAll('.question');
     allQuestions.forEach(question => {
@@ -102,6 +105,9 @@ function showQuestion() {
     const currentAnswers = questions[questionIndex].incorrect_answers.concat(questions[questionIndex].correct_answer);
     generateAnswers(currentAnswers);
 }
+
+
+/* Generate Answers Function displayed in radio buttons form for user to select */
 
 function generateAnswers(listofAnswers) {
   const quizanswers = document.querySelector('.quiz-answers');
@@ -135,6 +141,9 @@ function generateAnswers(listofAnswers) {
   });
 }
 
+
+/* Submit Answer Function providing feedback if no answer is selected */
+
 function submitAnswer() {
   if (userAnswer) {
     const selectedAnswer = document.querySelector(`input[name="answer"]:checked`);
@@ -163,9 +172,14 @@ function submitAnswer() {
 }
 
 
+/* Update Timer Display providing feedback to the user */
+
 function updateTimerDisplay() {
     timerElement.textContent = `Quiz Time Remaining: ${timerValue} seconds`;
 }
+
+
+/* Start Quiz Timer */
 
 function startTimer(endCallback) {
     updateTimerDisplay(); 
@@ -176,16 +190,22 @@ function startTimer(endCallback) {
 
         if (timerValue <= 0) {
             clearInterval(timerInterval);
-            endCallback(); // 
+            endCallback(); 
         }
     }, 1000);
 }
+
+
+/* End Quiz Function providing feedback for the user */
 
 function endQuiz() {
     alert('Time is up! Quiz has ended.');  
 
     resetQuiz();
 }
+
+
+/* Reset Quiz Function */
 
 function resetQuiz() {
     questionIndex = 0;
@@ -202,5 +222,6 @@ function resetQuiz() {
     loadQuizQuestion();
 
 }
+
 
 loadQuizQuestion();
