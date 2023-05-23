@@ -226,5 +226,13 @@ function resetQuiz() {
 
 /* Leaderboard Quiz Function */
 
+function quizuserleaderboard() {
+
+    const leaderboard = document.getElementById('leaderboard');
+
+    leaderboard.innerHTML = ''; 
+
+}
+
 
 loadQuizQuestion();
