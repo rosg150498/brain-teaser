@@ -115,6 +115,8 @@ function generateAnswers(listofAnswers) {
 
   const answerLetters = ['A', 'B', 'C', 'D'];
 
+  listofAnswers.sort(() => Math.random() - 0.5);
+
   listofAnswers.forEach((answerText, index) => {
     const answerElement = document.createElement('p');
     answerElement.classList.add(`answer-${answerLetters[index]}`);
@@ -201,7 +203,7 @@ function startTimer(endCallback) {
 function endQuiz() {
 
     alert(`Time is up! The Quiz has ended. Your score is ${score}`);
-    
+
     resetQuiz();
 }
 
