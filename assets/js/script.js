@@ -211,7 +211,7 @@ function resetQuiz() {
     questionIndex = 0;
     userAnswer = undefined;
     score = 0;
-    timerValue = 120;
+    timerValue = 100;
 
     const quizElement = document.getElementById('quiz-question');
     quizElement.innerHTML = '';
