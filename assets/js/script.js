@@ -222,6 +222,8 @@ function resetQuiz() {
     const quizAnswersElement = document.querySelector('.quiz-answers');
     quizAnswersElement.innerHTML = '';
 
+     document.getElementById('score').textContent = 'Score: 0';
+
     loadQuizQuestion();
 
 }
