@@ -199,8 +199,9 @@ function startTimer(endCallback) {
 /* End Quiz Function providing feedback for the user */
 
 function endQuiz() {
-    alert('Time is up! Quiz has ended.');  
 
+    alert(`Time is up! The Quiz has ended. Your score is ${score}`);
+    
     resetQuiz();
 }
 
