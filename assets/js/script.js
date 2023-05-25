@@ -1,5 +1,39 @@
+const mainmenu = document.getElementById('main-menu');
+const quizsection = document.getElementById('quiz');
+const leaderboardsection = document.getElementById('leaderboard');
 const quizanswers = document.querySelector('.quiz-answers');
 const timerElement = document.getElementById('quiz-timer');
+
+
+// Hiding the quiz and leaderboard sections when the page loads
+
+quizsection.style.display = 'none';
+
+leaderboardsection.style.display = 'none';
+
+
+// Event listener for the Play Quiz button
+
+document.querySelector('.quiz-play-button').addEventListener('click', function(event) {
+
+  event.preventDefault();
+
+
+  // Hiding the main menu and leaderboard sections when the quiz sections load
+
+    mainmenu.style.display = 'none';
+
+    leaderboardsection.style.display = 'none';
+
+  
+    // Showing the quiz sections when Play Quiz button is clicked on 
+    
+    quizsection.style.display = 'block';
+  
+    loadQuizQuestion();
+  });
+  
+
 
   function validateName (name) {
         const nameRegex = /^[a-zA-Z\s'-]+$/;
