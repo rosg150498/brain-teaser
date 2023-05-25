@@ -231,30 +231,42 @@ function resetQuiz() {
 
 /* Leaderboard Quiz Function */
 
-function quizuserleaderboard() {
+function displayuserLeaderboard() {
 
-    const leaderboard = document.getElementById('leaderboard');
+          const leaderboard = document.getElementById('leaderboard');
 
-    leaderboard.innerHTML = ''; 
+          leaderboard.innerHTML = '';
+        
+          const leaderboardTitle = document.createElement('h2');
 
-    highScores.forEach((score, index) => {
-        const row = document.createElement('div');
-        row.classList.add('leaderboard-result-row');
-    
-        const rankCell = document.createElement('div');
-        rankCell.classList.add('leaderboard-score-rank');
-        rankCell.textContent = index + 1;
-    
-        const nameCell = document.createElement('div');
-        nameCell.classList.add('leaderboard-user-name');
-        nameCell.textContent = score.name;
-    
-        const scoreCell = document.createElement('div');
-        scoreCell.classList.add('leaderboard-user-score');
-        scoreCell.textContent = score.score;
+          leaderboardTitle.textContent = 'Leaderboard';
 
-}
-)}
+          leaderboard.appendChild(leaderboardTitle);
+
+        
+          // Display quiz name and score
+          const quizName = document.getElementById('quiz-name').textContent.replace('Name: ', '');
+
+          const userScore = parseInt(document.getElementById('score').textContent.replace('Score: ', ''));
+
+          const userresultsdata = { name: quizName, score: userScore };
+
+          quizResults.push(userresultsdata);
+
+        
+          // Sort leaderboard by score in descending order
+          quizResults.sort((a, b) => b.score - a.score);
+        
+          // Display leaderboard
+          quizResults.forEach((entry, index) => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${index + 1}. ${entry.name}: ${entry.score}`;
+        
+            leaderboard.appendChild(listItem);
+          });
+        
+          leaderboard.style.display = 'block';
+        }
 
 
 loadQuizQuestion();
