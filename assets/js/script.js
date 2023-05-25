@@ -213,11 +213,13 @@ function endQuiz() {
 
      const userScore = parseInt(scoreElement.textContent.replace('Score: ', ''));
     
+     const userResultsData = { name: name, score: userScore };
 
-    displayuserLeaderboard();
+     quizresults.push(userResultsData);
+    
+     resetQuiz();
 
-    resetQuiz();
-
+     displayuserLeaderboard();
 
 }
 
