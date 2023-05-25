@@ -111,7 +111,7 @@ label{
     height: 150px;
     width: 150px;
     position: absolute;
-    margin-top: 54rem;
+    margin-top: 4rem;
     margin-left: 5.8rem;
     box-shadow: 0 8px 30px #FFA500;
     border-radius: 25%;
@@ -122,7 +122,7 @@ label{
     font-size: 34px;
     color: #FFFFFF;
     position: absolute;
-    margin-top: 60rem;
+    margin-top: 8rem;
     margin-left: 18rem;
 }
 
@@ -132,7 +132,7 @@ label{
     color: #FFFFFF;
     display: block;
     position: absolute;
-    margin-top: 64rem;
+    margin-top: 12rem;
     margin-left: 70rem;
     text-decoration: underline;
 }
@@ -142,7 +142,7 @@ label{
     font-size: 24px;
     color: #FFFFFF;
     position: absolute;
-    margin-top: 72rem;
+    margin-top: 20rem;
     margin-bottom: 20rem;
     margin-left: 5.8em;
     font-weight: bold;
@@ -152,7 +152,7 @@ label{
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     color: #FFFFFF;
-    margin-top: 75rem; 
+    margin-top: 26rem; 
     border-radius: 5px;
     cursor: pointer;
     display: flex;
@@ -172,8 +172,8 @@ label{
     padding:  1rem 1rem;
     position: absolute;
     font-size: 14.4px;
-    margin-top: 105rem;
-    margin-left: 8.8rem;
+    margin-top: 50rem;
+    margin-left: 22rem;
     cursor: pointer;
 }
 
@@ -187,7 +187,7 @@ label{
     display: inline-block;
     position: absolute;
     font-size: 20px;
-    margin-top: 105rem;
+    margin-top: 34rem;
     margin-left: 76rem;
     cursor: pointer;
     border-radius: 2rem;
@@ -207,7 +207,7 @@ label{
     font-size: 19.8px;
     color: #FFA500;
     position: absolute;
-    margin-top: 68rem;
+    margin-top: 16rem;
     margin-left: 46rem;
 }
 
