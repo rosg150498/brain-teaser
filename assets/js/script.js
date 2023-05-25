@@ -255,12 +255,14 @@ function displayuserLeaderboard() {
 
           leaderboardTitle.textContent = 'Leaderboard';
 
+          leaderboardTitle.classList.add('leaderboard-heading');
+
           leaderboard.appendChild(leaderboardTitle);
 
         
           // Display quiz name and score
           const quizName = document.getElementById('quiz-name').textContent.replace('Name: ', '');
-
+ 
           const userScore = parseInt(document.getElementById('score').textContent.replace('Score: ', ''));
 
           const userresultsdata = { name: quizName, score: userScore };
