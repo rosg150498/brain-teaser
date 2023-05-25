@@ -33,6 +33,7 @@ let userAnswer;
 let correctAnswer;
 let score = 0;
 let timerValue = 110;
+let quizresults = [];
 
 
 // Function that will load the quiz questions from the Open tdb API
@@ -204,7 +205,20 @@ function endQuiz() {
 
     alert(`Time is up! The Quiz has ended. Your score is ${score}`);
 
+     const nameElement = document.getElementById('quiz-name');
+
+     const name = nameElement.textContent.replace('Name: ', '');
+    
+     const scoreElement = document.getElementById('score');
+
+     const userScore = parseInt(scoreElement.textContent.replace('Score: ', ''));
+    
+
+    displayuserLeaderboard();
+
     resetQuiz();
+
+
 }
 
 
@@ -251,14 +265,14 @@ function displayuserLeaderboard() {
 
           const userresultsdata = { name: quizName, score: userScore };
 
-          quizResults.push(userresultsdata);
+          quizresults.push(userresultsdata);
 
         
           // Sort leaderboard by score in descending order
-          quizResults.sort((a, b) => b.score - a.score);
+          quizresults.sort((a, b) => b.score - a.score);
         
           // Display leaderboard
-          quizResults.forEach((entry, index) => {
+          quizresults.forEach((entry, index) => {
             const listItem = document.createElement('li');
             listItem.textContent = `${index + 1}. ${entry.name}: ${entry.score}`;
         
