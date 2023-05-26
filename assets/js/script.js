@@ -132,6 +132,8 @@ function showQuizQuestion() {
     quizElement.appendChild(answerElement);
   }
 
+
+  startTimer(endQuiz);
 }
 
 /* Show Question Function to display current question and hide all questions from API */
