@@ -194,25 +194,24 @@ function generateAnswers(listofAnswers) {
 function submitAnswer() {
   if (userAnswer) {
     const selectedAnswer = document.querySelector(`input[name="answer"]:checked`);
-    const isCorrect = selectedAnswer.getAttribute('data-correct') == 'true';
+    const isCorrect = selectedAnswer.value === questions[questionIndex].correct_answer;
 
     if (isCorrect) {
       alert('Correct answer!');
-      score += 10; 
-      document.getElementById('score').textContent = `Score: ${score}`; 
-      document.getElementById('score').style.position = 'absolute';
-      document.getElementById('score').style.marginTop = '68rem';
-      document.getElementById('score').style.marginLeft = '70rem';
-      document.getElementById('score').style.color = 'white';
-      document.getElementById('score').style.fontSize = '25px';
-      document.getElementById('score').style.textDecoration = 'underline';
+      score += 10;
+      document.getElementById('score').textContent = `Score: ${score}`;
     } else {
       alert('Incorrect answer!');
     }
 
     userAnswer = undefined;
     questionIndex++;
-    showQuestion();
+
+    if (questionIndex < questions.length) {
+      showQuizQuestion(questions);
+    } else {
+      endQuiz();
+    }
   } else {
     alert('Please select an answer.');
   }
