@@ -3,6 +3,7 @@ const quizsection = document.getElementById('quiz');
 const leaderboardsection = document.getElementById('leaderboard');
 const quizanswers = document.querySelector('.quiz-answers');
 const timerElement = document.getElementById('quiz-timer');
+const returnMainButton = document.querySelector('.return-main-menu');
 
 
 // Hiding the quiz and leaderboard sections when the page loads
@@ -33,6 +34,18 @@ document.querySelector('.quiz-play-button').addEventListener('click', function(e
     loadQuizQuestion();
   });
   
+
+  // Event listener for the Return Main button
+  returnMainButton.addEventListener('click', function(event) {
+
+  event.preventDefault();
+
+  
+  // Hiding the quiz section when showing the main menu section
+  quizsection.style.display = 'none';
+
+  mainmenu.style.display = 'block';
+});
 
 
   function validateName (name) {

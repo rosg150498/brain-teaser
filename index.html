@@ -1,69 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>General Knowledge Quiz</title>
-    <meta name="description" content="General Knowledge Quiz for all age groups looking to participate in a mental challenge and engaging game with various topics">
-    <meta name="keywords" content="general knowledge quiz, all age groups, participate, mental challenge, engaging game, various topics">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Knowledge Quiz</title>
+  <meta name="description" content="General Knowledge Quiz for all age groups looking to participate in a mental challenge and engaging game with various topics">
+  <meta name="keywords" content="general knowledge quiz, all age groups, participate, mental challenge, engaging game, various topics">
 
-    <!-- External CSS Stylesheet-->
-    <link rel="stylesheet" href="assets/css/style.css">
+  <!-- External CSS Stylesheet-->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-    <!-- Quiz Home Heading -->
-    <div id="main-menu">
-
+  <!-- Quiz Home Heading -->
+  <div id="main-menu">
     <div id="home-header">
-        <div id="home-icon"></div>
-        <h3 id="home-icon-text">brainteaser</h3>
+      <div id="home-icon"></div>
+      <h3 id="home-icon-text">brainteaser</h3>
     </div>
-
     <h1 id="home-quiz-heading">Welcome to Brain Teaser. Challenge yourself with Our General Knowledge Quiz!</h1>
-
     <form>
-
-    <label for="name">Enter your name:</label>
-    
-    <input type="text" id="name" placeholder="Please enter your name..." pattern="^[a-zA-Z\s'-]+$" required>
-
-     <p id="error-message">Please enter a valid name...</p>
-
-        <button id="submit-name" onclick="validateForm(event)" >Submit</button>
-
-
+      <label for="name">Enter your name:</label>
+      <input type="text" id="name" placeholder="Please enter your name..." pattern="^[a-zA-Z\s'-]+$" required>
+      <p id="error-message">Please enter a valid name...</p>
+      <button id="submit-name">Submit</button>
     </form>
+    <a href="#quiz" class="quiz-play-button">Play Quiz</a>
+  </div>
 
-        <a href="#quiz" class="quiz-play-button">Play Quiz</a>
-
+  <!-- General Knowledge Quiz Section -->
+  <div id="quiz">
+    <div id="quiz-icon"></div>
+    <h2 id="quiz-heading">General Knowledge Quiz</h2>
+    <div id="quiz-timer"></div>
+    <div id="quiz-name"></div>
+    <div id="score"></div>
+    <div id="quiz-question"></div>
+    <div class="quiz-answers"></div>
+    <button class="submit-answer">Submit Answer</button>
+    <div id="home-main-menu"> 
+      <a href="#main-menu" class="return-main-menu">Main Menu</a>
     </div>
+  </div>
 
-    <!-- General Knowledge Quiz Section -->
-    <div id="quiz">
-        <div id="quiz-icon"></div>
-        <h2 id="quiz-heading">General Knowledge Quiz</h2>
-        <div id="quiz-timer"></div>
-        <div id="quiz-name"></div>
-        <div id="score"></div>
-     <div id="quiz-question"></div>
-     <div class="quiz-answers"></div>
-         <button class="submit-answer" onclick="submitAnswer()">Submit Answer</button>
-        <div id="home-main-menu"> 
-            <a href="#main-menu" class="return-main-menu">Main Menu</a>
-        </div>
-    </div>
+  <!-- General Knowledge Quiz Leaderboard -->
+  <div id="leaderboard"></div>
 
-
-    <!-- General Knowledge Quiz Leaderboard -->
-
-
-    <div id="leaderboard"></div>
-
-
-    <!-- External Javascript File-->   
-    <script src="assets/js/script.js"></script>
-    
+  <!-- External JavaScript File-->   
+  <script src="assets/js/script.js"></script>
 </body>
-</html> 
+</html>
