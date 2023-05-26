@@ -95,53 +95,44 @@ function loadQuizQuestion() {
       showQuizQuestion();
     });
   }
-  
+
 
 // Function that will return the quiz questions and answers data
 
-function showQuizQuestion(data) {
-    const quizElement = document.getElementById('quiz-question');
-    quizElement.innerHTML = ''; 
+function showQuizQuestion() {
+  const quizElement = document.getElementById('quiz-question');
+  quizElement.innerHTML = '';
 
-    data.forEach((item, index) => {
-        const questionElement = document.createElement('div');
-        questionElement.setAttribute('id', `question-${index}`);
-        questionElement.classList.add('question', 'hidden');
+  const questionItem = questions[questionIndex];
+  const questionText = questionItem.question.replaceAll(/&#039;/g, "'").replaceAll(/&quot;/g, '"').replaceAll(/&shy;/g, '').replaceAll(/&rdquo;/g, '"');
+  const questionElement = document.createElement('div');
+  questionElement.classList.add('question');
+  questionElement.innerHTML = `
+    <p class="quiz-question">${questionIndex + 1}. ${questionText}</p>
+  `;
+  quizElement.appendChild(questionElement);
 
-        const questionText = document.createElement('p');
-        questionText.textContent = `${index + 1}. ${item.question.replaceAll(/&#039;/g, "'").replaceAll(/&quot;/g, '"').replaceAll(/&shy;/g, '').replaceAll(/&rdquo;/g, '"')}`;
-        questionText.setAttribute('class', 'quiz-question');
-        questionElement.appendChild(questionText);
+  const answerLetters = ['A', 'B', 'C', 'D'];
+  const allAnswers = [...questionItem.incorrect_answers, questionItem.correct_answer];
+  allAnswers.sort(() => Math.random() - 0.5); // shuffle answers
 
-        const answerLetters = ['A', 'B', 'C', 'D'];
-        const allAnswers = [...item.incorrect_answers, item.correct_answer];
-        allAnswers.sort(() => Math.random() - 0.5); // shuffle answers
+  for (let i = 0; i < allAnswers.length; i++) {
+    const answerText = allAnswers[i];
+    const answerElement = document.createElement('div');
+    answerElement.classList.add(`answer-${answerLetters[i]}`);
+    answerElement.innerHTML = `
+      <input type="radio" name="answer" value="${answerText}">
+      <span>${answerLetters[i]}. ${answerText}</span>
+    `;
 
-        for (let i = 0; i < allAnswers.length; i++) {
-            const answerText = allAnswers[i];
-            const answerElement = document.createElement('p');
-
-            answerElement.classList.add(`answer-${answerLetters[i]}`);
-            answerElement.innerHTML = answerText;
-
-            answerElement.addEventListener('click', () => {
-                userAnswer = answerText;
-            });
-
-            if (index > 0) { // Only add answers to the second and subsequent questions
-                quizanswers.appendChild(answerElement);
-            }
-        }
-
-        quizElement.appendChild(questionElement);
+    answerElement.addEventListener('click', () => {
+      userAnswer = answerText;
     });
 
-    questions = data;
-    showQuestion();
+    quizElement.appendChild(answerElement);
+  }
 
-    startTimer(endQuiz);
 }
-
 
 /* Show Question Function to display current question and hide all questions from API */
 
