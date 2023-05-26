@@ -85,13 +85,17 @@ let quizresults = [];
 
 // Function that will load the quiz questions from the Open tdb API
 
-function loadQuizQuestion() {
-    const APIUrl = `https://opentdb.com/api.php?amount=10&category=9&type=multiple`;
-    fetch(APIUrl)
-        .then(result => result.json())
-        .then(data => showQuizQuestion(data.results));
-}
 
+function loadQuizQuestion() {
+  const APIUrl = `https://opentdb.com/api.php?amount=10&category=9&type=multiple`;
+  fetch(APIUrl)
+    .then(result => result.json())
+    .then(data => {
+      questions = data.results; 
+      showQuizQuestion();
+    });
+  }
+  
 
 // Function that will return the quiz questions and answers data
 
